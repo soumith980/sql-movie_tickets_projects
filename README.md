@@ -26,7 +26,7 @@ This project is a Movie Ticket Booking System developed using MySQL.
 
 ## Key Queries & Analysis
 
-**###Top 5 most booked movies**
+**Top 5 most booked movies**
 -  select m.movie_name ,count(m.movie_name) as total from bookings b join shows s on b.show_id=s.show_id join movies m on s.movie_id=m.movie_id
  group by m.movie_name order by total desc limit 5;
 
@@ -34,7 +34,7 @@ This project is a Movie Ticket Booking System developed using MySQL.
 ![image alt](https://github.com/soumith980/sql-movie_tickets_projects/blob/c31f0cfd314eddb5d1b0321b497de3e3c747467c/images/Top%205%20movies.png)
 
 
-**###Most active users**
+**Most active users**
 
 -   select u.name,count(b.booking_id) as hight_bookings from bookings b join users U on b.user_id =u.user_id group by u.user_id order by hight_bookings desc;
 
@@ -65,7 +65,7 @@ This project is a Movie Ticket Booking System developed using MySQL.
 
 
 
- **-Highest revenue-generating movie**
+ **Highest revenue-generating movie**
  -   select m.movie_name, sum(b.total_amount) as total_revenu from bookings b join shows s on b.show_id=s.show_id join movies m on s.movie_id = m.movie_id 
 group by m.movie_name order by total_revenu desc limit 1;
 
@@ -76,6 +76,10 @@ group by m.movie_name order by total_revenu desc limit 1;
 
 
  
-**- User spending analysis**
+**User spending analysis**
 - select u.user_id,u.name, sum(b.total_amount) as total_amount from bookings b join users u on b.user_id=u.user_id group by u.user_id order by total_amount desc;
+
+
+
+![image alt](https://github.com/soumith980/sql-movie_tickets_projects/blob/25556d2a65151612b9c208e28d50e0f53d42b252/images/User%20spending%20analysis.png)
 
