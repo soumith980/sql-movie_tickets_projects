@@ -61,12 +61,12 @@ This project is a Movie Ticket Booking System developed using MySQL.
 
 
 
+![image alt](https://github.com/soumith980/sql-movie_tickets_projects/blob/a2cf7c08b220ccb947506255cc95c1760600e234/images/Monthly%20booking%20report.png)
 
 
 
-
- ** Highest revenue-generating movie**
-select m.movie_name, sum(b.total_amount) as total_revenu from bookings b join shows s on b.show_id=s.show_id join movies m on s.movie_id = m.movie_id 
+ **-Highest revenue-generating movie**
+ -   select m.movie_name, sum(b.total_amount) as total_revenu from bookings b join shows s on b.show_id=s.show_id join movies m on s.movie_id = m.movie_id 
 group by m.movie_name order by total_revenu desc limit 1;
 
 
