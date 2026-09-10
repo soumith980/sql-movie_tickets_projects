@@ -35,7 +35,17 @@ This project is a Movie Ticket Booking System developed using MySQL.
 
 
 **###Most active users**
--select u.name,count(b.booking_id) as hight_bookings from bookings b join users U on b.user_id =u.user_id group by u.user_id order by hight_bookings desc;
+
+-   select u.name,count(b.booking_id) as hight_bookings from bookings b join users U on b.user_id =u.user_id group by u.user_id order by hight_bookings desc;
+
+
+
+
+
+
+
+
+![image alt](https://github.com/soumith980/sql-movie_tickets_projects/blob/de56714c4c3076895a6cdee7b6ed65ae655219cf/images/Most%20active%20user.png)
 
 
 
