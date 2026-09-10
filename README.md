@@ -72,10 +72,10 @@ group by m.movie_name order by total_revenu desc limit 1;
 
 
 
-
+![image alt](https://github.com/soumith980/sql-movie_tickets_projects/blob/e25cd7028443ae13e808c22575a59a373dd051da/images/Movie%20generating%20highest%20revenue.png)
 
 
  
 **- User spending analysis**
-select u.user_id,u.name, sum(b.total_amount) as total_amount from bookings b join users u on b.user_id=u.user_id group by u.user_id order by total_amount desc;
+- select u.user_id,u.name, sum(b.total_amount) as total_amount from bookings b join users u on b.user_id=u.user_id group by u.user_id order by total_amount desc;
 
