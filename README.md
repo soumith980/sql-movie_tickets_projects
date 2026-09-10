@@ -29,6 +29,7 @@ This project is a Movie Ticket Booking System developed using MySQL.
 **###Top 5 most booked movies**
 -  select m.movie_name ,count(m.movie_name) as total from bookings b join shows s on b.show_id=s.show_id join movies m on s.movie_id=m.movie_id
  group by m.movie_name order by total desc limit 5;
+![image alt](https://github.com/soumith980/sql-movie_tickets_projects/blob/c31f0cfd314eddb5d1b0321b497de3e3c747467c/images/Top%205%20movies.png)
 
 
 **###Most active users**
